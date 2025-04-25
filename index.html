@@ -11,16 +11,21 @@
 
     <div id="container">
         <h2>Adicionar tarefa</h2>
-        <input type="text" id="nome" placeholder="Nome da tarefa">
         <input type="text" id="descricao" placeholder="Descrição">
         <select id="status">
             <option value="status">Pendente</option>
             <option value="status">Concluída</option>
         </select>
-        <button id="incluir">Incluir tarefa</button>
+        <button id="incluir" onclick="adicionarTarefa">Incluir tarefa</button>
     </div>
+
+    <div class="contagem">
+        <p>Pendentes: <span id="pendentes">0</span> | Concluídas: <span id="concluidas">0</span></p>
+    </div>
+
     <div id="lista">
         <h2>Lista de tarefas</h2>
+        <ul id="listaTarefas"></ul>
 
     </div>
 
