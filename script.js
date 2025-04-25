@@ -28,6 +28,30 @@ function adicionarTarefa() {
     novaTarefa.appendChild(checkbox);
     novaTarefa.appendChild(document.createTextNode(` ${descricao} - ${status === 'status' ? 'Pendente' : 'Concluída'}`));
 
+    // Cria o botão de excluir
+    const botaoExcluir = document.createElement('button');
+    botaoExcluir.textContent = 'Excluir';
+    botaoExcluir.addEventListener('click', () => {
+        novaTarefa.remove();
+        atualizarContagem();
+    });
+
+    // Cria o botão de editar
+    const botaoEditar = document.createElement('button');
+    botaoEditar.textContent = 'Editar';
+    botaoEditar.addEventListener('click', () => {
+        const novaDescricao = prompt('Edite a descrição da tarefa:', descricao);
+        if (novaDescricao !== null && novaDescricao.trim() !== '') {
+            novaTarefa.childNodes[1].textContent = ` ${novaDescricao} - ${status === 'status' ? 'Pendente' : 'Concluída'}`;
+        }
+    });
+
+    // Adiciona os botões ao item da tarefa
+    novaTarefa.appendChild(botaoExcluir);
+    novaTarefa.appendChild(botaoEditar);
+
+
+
     // Adiciona a nova tarefa à lista de tarefas
     const listaTarefas = document.getElementById('listaTarefas');
     listaTarefas.appendChild(novaTarefa);
