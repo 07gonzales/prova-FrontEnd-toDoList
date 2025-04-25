@@ -69,3 +69,48 @@ h1, h2 {
 #lista h2 {
     margin-bottom: 15px;
 }
+
+
+/* Estilização de cada tarefa inserida na lista */
+#listaTarefas li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+/* Estilo do checkbox */
+#listaTarefas li input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+/* Linha da tarefa na lista */
+#listaTarefas li span {
+    flex-grow: 1;
+    margin-right: 10px;
+    word-break: break-word;
+}
+
+/* Botões das tarefas */
+#listaTarefas li button {
+    margin-left: 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+}
+/* Checkbox com fundo verde*/
+#listaTarefas li.concluida {
+    background-color: lightgreen;
+    border-color: #4caf50;
+}
