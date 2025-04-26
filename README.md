@@ -37,4 +37,4 @@ Este é um projeto de uma **Lista de Tarefas Interativa**, desenvolvido para ger
 <img alt="Demonstração do Projeto" src="home.png">
 <img alt="Demonstração do Projeto" src="edit.png">
 
-Desenvolvido Gabriel Pinto Gonzales.
+Desenvolvido pelo aluno Gabriel Pinto Gonzales.
